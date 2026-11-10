@@ -1,12 +1,10 @@
 # Portfolio Part 1: Component Brainstorming
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) then delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) then delete this comment -->
-- **Due Date**: <!-- TODO: fill with due date and time (e.g., 10/17 @ 3:10 PM EST) then delete this comment -->
+- **Name**: Petros Yohannes
+- **Dot Number**: yohannes.36
+- **Due Date**: 11/13 @ 1:50 PM EST
 
 ## Assignment Overview
-
-<!-- TODO: read the assignment overview then delete this comment -->
 
 The overall goal of the portfolio project is to have you design and implement
 your own OSU component. There are no limits to what you choose to design and
@@ -29,8 +27,6 @@ implement.
 
 ## Assignment Checklist
 
-<!-- TODO: browse the checklist then delete this comment -->
-
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
 opening the TODOs window from the sidebar. The icon looks like a tree and will
@@ -52,8 +48,6 @@ to the tree diagram (you may remove this one as well):
 
 ## Assignment Learning Objectives
 
-<!-- TODO: read the assignment learning objectives then delete this comment -->
-
 Without learning objectives, there really is no clear reason why a particular
 assessment or activity exists. Therefore, to be completely transparent, here is
 what we're hoping you will learn through this particular aspect of the portfolio
@@ -66,8 +60,6 @@ project. Specifically, students should be able to:
    discipline
 
 ## Assignment Rubric: 10 Points
-
-<!-- TODO: read the assignment rubric then delete this comment -->
 
 Again, to be completely transparent, most of the portfolio project, except the
 final submission, is designed as a formative assessment. Formative assessments
@@ -106,23 +98,21 @@ Below is further rationale/explanation for the rubric items above:
 > brainstorming. Plus it helps us get to know you better! Feel free to share
 > images in this section.
 
-<!-- TODO: briefly talk about your interests then delete this comment.
-Also, protip: you can preview what your response looks like by hitting
-the magnifying glass icon in the upper-right corner or pressing CTRL+K and
-then V. This kind of button combination is called a chord, for whatever
-reason -->
+I am very interested in computer networking, mid-level programming, and
+everything that has to do with the Internet. I want to explore web servers,
+self-hosted storage, and secure VPNs because this is a very engaging field for
+me that explains how the devices we use every day share information.
+I find it unfortunate that people always surrender their personal data to cloud
+companies for convenience and want the internet to be more self-sufficient,
+which is why I'm learning how to make networking more efficient and reliable.
 
 ## Assignment
-
-<!-- TODO: read the assignment section then delete this comment -->
 
 As previously stated, you are tasked with brainstorming 3 possible components.
 To aid you in this process, we have provided [some example components][example-components]
 that may help you in your brainstorming. All of these components were made at
 some point by one of your peers, so you should feel confident that you can
 accomplish any of them.
-
-<!-- TODO: browse the list of possible projects then delete this comment -->
 
 There is no requirement that you use any of the components listed above.
 If you want to model something else, go for it! Very common early object
@@ -142,8 +132,6 @@ list-like components that have different ways of manipulating the data. Think
 about different ways you might allow a client to manipulate your component.
 
 ### Example Component
-
-<!-- TODO: review this example component then delete this comment -->
 
 To help you brainstorm a few components, we've provided an example below of a
 component you already know well: NaturalNumber. We highly recommend that you
@@ -211,68 +199,122 @@ will likely refine your design to make your implementation easier to use.
 
 > Please use this section to share your designs.
 
-- Component Design #1: <!-- TODO: give component a name then delete this comment -->
+- Component Design #1: `LocalAreaNetwork`
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - A simplified model of a local area network which can house devices and
+    assign them IP addresses which allows them to communicate.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - `void getPublicIP(Sequence<Integer> ip)`: takes the given integer sequence
+    IP and modifies it to be the LAN's public IP address. Every network has an
+    IP address that can be used to reach it using the public internet (go to
+    whatismyip.com to see what I mean).
+    - `boolean connectDevice(Sequence<Integer> localIp, String password)`:
+    registers a local IP address into the network. For example, if you connect
+    your laptop to WiFi, your router might assign the laptop an IP like
+    192.168.0.120. If the network's password protected, you must type it
+    to connect a device. If not, just type null for the string. The method
+    returns a boolean based on the connection's success.
+    - `void disconnectDevice(Sequence<Integer> localIp)`: disconnects a device
+    from the network if it is already on there.
+    - `void setPassword(String password)`: sets a password for the network that
+    you must enter each time you want to connect a device
+    - `void clearPassword()`: clears the network's password if it has any
+    - `int numberOfDevices()`: returns the number of devices actively connected
+    to the LAN.
+    - `void toggleConnectivity(boolean status)`: choose whether or not the
+    network is open to register any new local devices. If status is true then
+    the network will allow new devices, but it won't if status is false.
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - `boolean passwordProtection()`: shows whether or not the network is
+    password protected.
+    - `boolean changePassword(String oldPass, String newPass)`: changes the
+    network's password from oldPass to newPass. Boolean shows if it worked. If
+    you entered the wrong oldPass, the method will not work
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes because we can modify the component's internal variables, such as
+      its password and connectivity status
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - It would rely on Sequence<Integer> because an IP address consists of
+      4 numbers between 0-255, each separated by periods and called an octet.
+      The order of these octets matters to correctly address each device.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - No (for now). As it is, the numbers involved in this component are
+      based on user input. But I might make a default IP address constant.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes. My secondary methods for this class do not touch the internal
+      attribute variables and just make the component more convenient for the
+      user. passwordProtection() can be implemented by connecting a dummy IP
+      to the network with connectDevice() using null for the password and if
+      the boolean returns false, that means the device connection failed because
+      the network is password protected. So we return true for
+      passwordProtection(). And the converse for if connectDevice() returns true
 
-- Component Design #2: <!-- TODO: give component a name then delete this comment -->
+- Component Design #2: `HardDrive`
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - A simplified model of a hard drive that can replicate basic reading
+    and writing functions. For simplicity, we give 1 sector just 1 byte of data
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - `byte readData(NaturalNumber sector)`: Returns the byte of data at a given
+    sector on the hard drive (either a 1 or 0)
+    - `void writeData(NaturalNumber sector, byte data)`: Writes a byte of data
+    at a given sector on the hard drive (either a 1 or 0)
+    - `NaturalNumber sectorCount()`: Returns the number of sectors on the hard
+    drive
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - `NaturalNumber storageCapacity()`: Returns the total number of bytes on
+    the hard drive
+    - `void format()`: Erases the data on the hard drive
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes because we can modify the component's internal variables, such as
+      the bytes at each sector
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - It would rely on NaturalNumber because modern hard drives contain
+      astronomical amounts of sectors that traditional ints/doubles can't cover.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes. We would need to assign a constant for the number of bytes in a
+      sector because standard HDDs have 512 logical bytes per sector
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes. The secondary methods do not modify the internal attributes of
+      the hard drive component and just do calculations with them. For example,
+      the storageCapacity() method just takes sectorCount() and multiplies that
+      by 512 to get the total storage capacity.
 
-- Component Design #3: <!-- TODO: give component a name then delete this comment -->
+- Component Design #3: Monitor
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - A computer monitor component that simulates a desktop monitor
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - `void togglePower()`: This method inverts the monitor's power status,
+    acting as a toggle switch
+    - `void setConnectionType()`: Sets the type of cable the monitor uses to
+    get an input (HDMI, DP, VGA etc)
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - `String displaySize()`: shows the horizontal x vertical display size
+    of the monitor
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - I do not know
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - It would only rely on String but no OSU components though, because
+      we aren't using any other classes to store the monitor's data
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - It would probably need some enums for each possible connection type like
+      VGA, HDMI, DVI, DP etc because those are unchanging constants.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - I do not know
 
 ## Post-Assignment
 
@@ -280,8 +322,6 @@ The following sections detail everything that you should do once you've
 completed the assignment.
 
 ### Changelog
-
-<!-- TODO: create CHANGELOG then delete this comment -->
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
@@ -320,8 +360,6 @@ of development.
 
 ### Submission
 
-<!-- TODO: read the submission instructions then delete this comment -->
-
 If you have completed the assignment using this template, we recommend that
 you convert it to a PDF before submission. If you're not sure how, check out
 this [Markdown to PDF guide][markdown-to-pdf-guide]. However, PDFs should be
@@ -330,11 +368,7 @@ all your work is there before submitting. For future assignments, you will
 just be submitting a link to a pull request. This will be the only time
 you have to submit any PDFs.
 
-<!-- TODO: upload a PDF of this document and the CHANGELOG to Carmen then delete this comment -->
-
 ### Peer Review
-
-<!-- TODO: review the peer review guidelines then delete this comment -->
 
 Following the completion of this assignment, you will be assigned three
 students' component brainstorming assignments for review. Your job during the
@@ -360,8 +394,6 @@ PDF to read this rubric as a table).
 If you'd like to give feedback for this assignment (or any assignment, really),
 make use of [this survey][survey]. Your feedback helps make assignments
 better for future students.
-
-<!-- TODO: follow the link to share your feedback then delete this comment -->
 
 [example-components]: https://therenegadecoder.com/code/the-never-ending-list-of-small-programming-project-ideas/
 [markdown-to-pdf-guide]: https://therenegadecoder.com/blog/how-to-convert-markdown-to-a-pdf-3-quick-solutions/

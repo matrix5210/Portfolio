@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Calendar Versioning](https://calver.org/) of
 the following form: YYYY.0M.0D.
 
+## 2026.11.10
+
+### Added
+
+- Designed a `LocalAreaNetwork` component
+- Designed a `HardDrive` component
+- Designed a `Monitor` component
+
 ## [Unreleased]
 
 - Fixed an issue where the course URLs dropped the `web-sw1` paths
