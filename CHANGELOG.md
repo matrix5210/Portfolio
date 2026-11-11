@@ -10,6 +10,18 @@ the following form: YYYY.0M.0D.
 
 ### Added
 
+- Designed a proof of concept for HardDrive component
+- Added an implementation of the HardDrive component's kernel
+
+### Updated
+
+- Changed parameters of the kernel to make it fit OSU's component standards
+(added <T>)
+
+## 2026.11.10
+
+### Added
+
 - Designed a `LocalAreaNetwork` component
 - Designed a `HardDrive` component
 - Designed a `Monitor` component
