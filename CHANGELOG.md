@@ -6,15 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Calendar Versioning](https://calver.org/) of
 the following form: YYYY.0M.0D.
 
-## 2026.11.11
+## 2026.11.12
 
 ### Added
-- Designed a proof of concept for HardDrive component
 
-### Removed
-
-- Rolled back the kernel implementation as it was done too early
-- Removed the <T> parameter from HardDrive because <T> isn't really required
+- Designed kernel and enhanced interfaces for HardDrive component
 
 
 ## 2026.11.11
@@ -26,8 +22,10 @@ the following form: YYYY.0M.0D.
 
 ### Updated
 
-- Changed parameters of the kernel to make it fit OSU's component standards
-(added <T>)
+### Removed
+
+- Rolled back the kernel implementation as it was done too early
+- Removed the <T> parameter from HardDrive because <T> isn't really required
 
 ## 2026.11.10
 
