@@ -93,4 +93,34 @@ class HardDrive1 {
 
     }
 
+    /**
+     * Returns the total number of sectors on the drive.
+     *
+     * @return the sector count
+     */
+    public NaturalNumber sectorCount() {
+        NaturalNumber count = this.sectors.newInstance();
+        count.copyFrom(this.sectors);
+        return count;
+    }
+
+    /**
+     * Returns the total storage capacity in bytes.
+     *
+     * @return total capacity in bytes
+     */
+    public NaturalNumber storageCapacity() {
+        final int bytesPerSector = 512;
+        NaturalNumber capacity = this.sectorCount();
+        capacity.multiply(new NaturalNumber1L(bytesPerSector));
+        return capacity;
+    }
+
+    /**
+     * Erases all stored data on the hard drive.
+     */
+    public void format() {
+        this.sectorData.clear();
+    }
+
 }
