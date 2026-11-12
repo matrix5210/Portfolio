@@ -44,6 +44,8 @@ proof-of-concept, you should be able to answer this question to some extent.
 
 ## Assignment Checklist
 
+<!-- TODO: browse the checklist then delete this comment -->
+
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
 opening the TODOs window from the sidebar. The icon looks like a tree and will
@@ -130,7 +132,7 @@ hierarchy diagram using whatever tools you would like. Then, include a picture
 of it in this folder. You may also embed it just below using markdown syntax
 (i.e., `![ALT TEXT](path/to/file)`).
 
-![alt text](image.png)
+<!-- TODO: make a diagram of your component hierarchy then delete this comment -->
 
 To start making your interfaces, make a branch off of main in your new repo
 called something like `interfaces`. There are many ways to do this, but my
@@ -151,6 +153,8 @@ merges, you will need to pull the changes from main into your current branch
 to see them. If you don't like this workflow, you may try following the
 rebase strategies described [here](https://stackoverflow.com/questions/35790561/working-while-waiting-for-pending-pr)
 and [here](https://stackoverflow.com/questions/18021888/continue-working-on-a-git-branch-after-making-a-pull-request).
+
+<!-- TODO: make a new branch from main then delete this comment -->
 
 ## Assignment Tasks
 

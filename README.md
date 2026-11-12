@@ -16,6 +16,8 @@ a bit easier.
 
 ### Step 1: Create a Repo From This Template
 
+<!-- TODO: use GitHub to create a repo from this template -->
+
 Assuming you're reading this README from GitHub, you can make use of this
 repo by clicking the `Use this template` button in the top-right corner of
 this page. If you can't find the button, [this link][use-this-template]
@@ -31,6 +33,8 @@ feature of letting you open a repo directly in VSCode from the
 
 ### Step 2: Install Recommended Plugins
 
+<!-- TODO: install recommended plugins and delete this comment -->
+
 When you open VSCode with this project, you should get a notification in the
 bottom right corner that there are some recommended extensions to install.
 Click install all. If you ignored this message or it never came up, feel free
@@ -39,6 +43,8 @@ extensions listed.
 
 ### Step 3: Install the Latest JDK
 
+<!-- TODO: install latest JDK and delete this comment -->
+
 If you do not have an available JDK on your system, you may be prompted to
 install one by VSCode. The default seems to be Red Hat's OpenJDK, which seems to
 require you to register for an account or to install on the command line.
@@ -46,6 +52,8 @@ Regardless, there is no mac support. As a result, I would just recommend
 installing the latest JDK [directly from Oracle's site][jdk-downloads].
 
 ### Step 4: Add Key Libraries to Project
+
+<!-- TODO: add key libraries to project and delete this comment -->
 
 As you are probably all aware at this point, you need the components jar to get
 anything running. My advice is to [download it from here][components-jar]. Then,
@@ -69,6 +77,8 @@ point you're struggling with Step 3, just copy the lib folder from the monorepo
 template.
 
 ## Next Steps
+
+<!-- TODO: navigate to doc/DIRECTIONS.md and delete this comment -->
 
 Now that you have everything setup, you can begin crafting your component. All
 of the directions you need to get started are in the
