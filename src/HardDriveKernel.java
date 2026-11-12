@@ -10,7 +10,7 @@ import components.standard.Standard;
  *
  * @author Petros Yohannes
  */
-public interface HardDriveKernel<T> extends Standard<T>, Iterable<T> {
+public interface HardDriveKernel extends Standard<HardDriveKernel> {
     /**
      * Reads the byte at the given sector of {@code this}.
      *
