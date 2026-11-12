@@ -11,6 +11,7 @@ the following form: YYYY.0M.0D.
 ### Added
 
 - Designed kernel and enhanced interfaces for HardDrive component
+- Designed abstract class for HardDrive component
 
 
 ## 2026.11.11

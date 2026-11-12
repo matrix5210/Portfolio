@@ -2,6 +2,8 @@ import components.map.Map;
 import components.map.Map1L;
 import components.naturalnumber.NaturalNumber;
 import components.naturalnumber.NaturalNumber1L;
+import components.simplewriter.SimpleWriter;
+import components.simplewriter.SimpleWriter1L;
 
 /**
  *
@@ -21,14 +23,31 @@ public final class ProofOfConcept {
      *            command-line arguments
      */
     public static void main(String[] args) {
-        final int sectorIndex = 20;
-        final int totalSectors = 10;
-        final byte sampleByte = 10;
+        SimpleWriter out = new SimpleWriter1L();
+        final int totalSectors1 = 100;
+        final int totalSectors2 = 1000;
+        final int totalSectors3 = 65536;
 
-        NaturalNumber twenty = new NaturalNumber1L(sectorIndex);
-        HardDrive1 hdd = new HardDrive1(new NaturalNumber1L(totalSectors));
-        hdd.writeData(twenty, sampleByte);
-        System.out.println(hdd.readData(twenty));
+        final byte sampleByte1 = 10;
+        final byte sampleByte2 = 30;
+        final byte sampleByte3 = 120;
+
+        HardDrive1 hdd1 = new HardDrive1(new NaturalNumber1L(totalSectors1));
+        HardDrive1 hdd2 = new HardDrive1(new NaturalNumber1L(totalSectors2));
+        HardDrive1 hdd3 = new HardDrive1(new NaturalNumber1L(totalSectors3));
+
+        hdd1.writeData(new NaturalNumber1L(10), sampleByte1);
+        hdd1.writeData(new NaturalNumber1L(20), sampleByte2);
+        out.println(hdd1.readData(new NaturalNumber1L(10)));
+        out.println(hdd1.readData(new NaturalNumber1L(20)));
+
+        hdd2.writeData(new NaturalNumber1L(20), sampleByte2);
+        out.println(hdd2.readData(new NaturalNumber1L(20)));
+
+        hdd3.writeData(new NaturalNumber1L(30), sampleByte3);
+        out.println(hdd3.readData(new NaturalNumber1L(30)));
+
+        out.close();
     }
 
 }
