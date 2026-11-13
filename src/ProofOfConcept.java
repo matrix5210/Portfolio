@@ -32,9 +32,12 @@ public final class ProofOfConcept {
         final byte sampleByte2 = 30;
         final byte sampleByte3 = 120;
 
-        HardDrive1 hdd1 = new HardDrive1(new NaturalNumber1L(totalSectors1));
-        HardDrive1 hdd2 = new HardDrive1(new NaturalNumber1L(totalSectors2));
-        HardDrive1 hdd3 = new HardDrive1(new NaturalNumber1L(totalSectors3));
+        HardDriveProof hdd1 = new HardDriveProof(
+                new NaturalNumber1L(totalSectors1));
+        HardDriveProof hdd2 = new HardDriveProof(
+                new NaturalNumber1L(totalSectors2));
+        HardDriveProof hdd3 = new HardDriveProof(
+                new NaturalNumber1L(totalSectors3));
 
         hdd1.writeData(new NaturalNumber1L(10), sampleByte1);
         hdd1.writeData(new NaturalNumber1L(20), sampleByte2);
@@ -57,7 +60,7 @@ public final class ProofOfConcept {
  * HardDrive1's proof of concept sample class with some implementations.
  *
  */
-class HardDrive1 {
+class HardDriveProof {
     /**
      * Total number of sectors on the drive.
      */
@@ -75,7 +78,7 @@ class HardDrive1 {
      *            the total number of sectors
      * @requires sec is not null
      */
-    HardDrive1(NaturalNumber sec) {
+    HardDriveProof(NaturalNumber sec) {
         this.sectors = sec.newInstance();
         this.sectors.copyFrom(sec);
         this.sectorData = new Map1L<NaturalNumber, Byte>();
