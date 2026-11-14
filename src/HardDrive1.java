@@ -6,6 +6,12 @@ import components.naturalnumber.NaturalNumber1L;
 /**
  * Simplified representation of a mechanical hard disk drive, with data
  * represented by a Map of NaturalNumber keys and Byte values.
+ *
+ * @convention
+ * @correspondence
+ *
+ * @author Petros Yohannes
+ *
  */
 public class HardDrive1 extends HardDriveSecondary {
     /**
@@ -42,9 +48,6 @@ public class HardDrive1 extends HardDriveSecondary {
     /**
      * Private no-argument constructor for {@code newInstance}.
      */
-    private HardDrive1() {
-        this.createNewRep();
-    }
 
     /**
      * Kernel methods.
@@ -61,6 +64,8 @@ public class HardDrive1 extends HardDriveSecondary {
     @Override
     public byte readData(NaturalNumber sec) {
         assert sec != null : "Violation of: sec is not null";
+        assert sec.compareTo(
+                this.sectors) < 0 : "Violation of: sec < this.sectors";
         byte data = -1;
         if (this.rep.hasKey(sec)) {
             data = this.rep.value(sec);
@@ -81,7 +86,7 @@ public class HardDrive1 extends HardDriveSecondary {
     public void writeData(NaturalNumber sec, byte data) {
         assert sec != null : "Violation of: sec is not null";
         assert sec.compareTo(
-                this.sectors) <= 0 : "Violation of: sec < this.sectors";
+                this.sectors) < 0 : "Violation of: sec < this.sectors";
         if (data < 0) {
             if (this.rep.hasKey(sec)) {
                 this.rep.remove(sec);
@@ -108,37 +113,47 @@ public class HardDrive1 extends HardDriveSecondary {
     }
 
     /**
-     * Secondary methods.
-     */
-
-    /**
      * The standard methods.
      */
 
     @Override
     public final HardDrive newInstance() {
         try {
-            return this.getClass().getDeclaredConstructor().newInstance();
+            NaturalNumber secCopy = this.sectors.newInstance();
+            secCopy.copyFrom(this.sectors);
+            return this.getClass().getConstructor(NaturalNumber.class)
+                    .newInstance(secCopy);
         } catch (ReflectiveOperationException e) {
             throw new AssertionError(
                     "Cannot construct object of type " + this.getClass());
         }
     }
 
+    /**
+     * Clears the drive.
+     *
+     * @clears {@code this}
+     */
     @Override
     public final void clear() {
         this.createNewRep();
     }
 
     /**
+     * Transfers the data from one drive to another.
      *
      * @param source
+     *            the original hard drive whose contents are transferred to the
+     *            new one
+     * @updates {@code this}
+     * @clears {@code source}
      */
     @Override
     public final void transferFrom(HardDrive source) {
         assert source != null : "Violation of: source is not null";
         assert source != this : "Violation of: source is not this";
-        assert source instanceof HardDrive1 : "Violation of: source is of dynamic type HardDrive1";
+        assert source instanceof HardDrive1 : "Violation of: source is of "
+                + "dynamic type HardDrive1";
         /*
          * This cast cannot fail since the assert above would have stopped
          * execution in that case.

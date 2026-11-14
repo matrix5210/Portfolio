@@ -39,16 +39,19 @@ public final class ProofOfConcept {
         HardDriveProof hdd3 = new HardDriveProof(
                 new NaturalNumber1L(totalSectors3));
 
-        hdd1.writeData(new NaturalNumber1L(10), sampleByte1);
-        hdd1.writeData(new NaturalNumber1L(20), sampleByte2);
-        out.println(hdd1.readData(new NaturalNumber1L(10)));
-        out.println(hdd1.readData(new NaturalNumber1L(20)));
+        final int ten = 10;
+        final int twenty = 20;
+        final int thirty = 30;
+        hdd1.writeData(new NaturalNumber1L(ten), sampleByte1);
+        hdd1.writeData(new NaturalNumber1L(twenty), sampleByte2);
+        out.println(hdd1.readData(new NaturalNumber1L(ten)));
+        out.println(hdd1.readData(new NaturalNumber1L(twenty)));
 
-        hdd2.writeData(new NaturalNumber1L(20), sampleByte2);
-        out.println(hdd2.readData(new NaturalNumber1L(20)));
+        hdd2.writeData(new NaturalNumber1L(twenty), sampleByte2);
+        out.println(hdd2.readData(new NaturalNumber1L(twenty)));
 
-        hdd3.writeData(new NaturalNumber1L(30), sampleByte3);
-        out.println(hdd3.readData(new NaturalNumber1L(30)));
+        hdd3.writeData(new NaturalNumber1L(thirty), sampleByte3);
+        out.println(hdd3.readData(new NaturalNumber1L(thirty)));
 
         out.close();
     }

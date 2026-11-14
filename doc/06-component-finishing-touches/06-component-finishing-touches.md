@@ -1,8 +1,8 @@
 # Portfolio Part 6: Finishing Touches
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) and delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) and delete this comment -->
-- **Due Date**: <!-- TODO: fill out with due date and time (e.g., 10/17 @ 3:10 PM EST) and delete this comment -->
+- **Name**: Petros Yohannes
+- **Dot Number**: yohannes.36
+- **Due Date**: 11/13 @ 1:50 PM EST
 
 ## Assignment Overview
 
@@ -49,8 +49,6 @@ Many of these additional techniques are somewhat out of the scope of this
 course, but just knowing about them could set you up for long term success.
 
 ## Assignment Checklist
-
-<!-- TODO: browse the checklist then delete this comment -->
 
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
@@ -140,8 +138,6 @@ merges, you will need to pull the changes from main into your current branch
 to see them. If you don't like this workflow, you may try following the
 rebase strategies described [here](https://stackoverflow.com/questions/35790561/working-while-waiting-for-pending-pr)
 and [here](https://stackoverflow.com/questions/18021888/continue-working-on-a-git-branch-after-making-a-pull-request).
-
-<!-- TODO: make a new branch from main then delete this comment -->
 
 ## Assignment Tasks
 
@@ -307,18 +303,37 @@ Take some time to fill them out honestly.
 > complete the portfolio project, how much better (or worse) do you think you
 > understand software development and why?
 
-<!-- TODO: discuss -->
+I think I understand the key components of software development better. Because
+I picked a real world device whose functions and purpose I understand well, it
+was easy for me to map such functions into Java. This boosted my confidence in
+developing realistic software.
 
 > Also, did the portfolio project surface any gaps in your own knowledge of
 > software development. If so, what are those gaps and how did you address them?
 
-<!-- TODO: discuss -->
+I did struggle briefly with determining which class / interface to implement
+the Object methods like toString() and the secondary methods, but I reviewed
+the Software II documentation for pre-existing components like NaturalNumber and
+BinaryTree, and asked my professor for further explanation. Doing that cleared
+any doubt I had.
 
 > Finally, as a part of completing the portfolio project, to what extent has
 > your perspective of software development changed, if at all? In other words,
 > is software development something you still enjoy? If not, why not?
 
-<!-- TODO: discuss -->
+This project didn't really change my look on software development. It was just
+a reinforcement of the things I already believe about it and writing the
+hard drive component felt like a routine task without much hurdles.
+
+Unfortunately I do not enjoy traditional software development as much as I
+hoped I would or used to because the concepts are the exact same from field to
+field. High level coding just feels boring. I have also grown to despise the
+antisocial aspect of sitting down at a computer all day writing code and risking
+back pain. I find networking to be a more exciting discipline of computer
+science / IT because you're more appreciated, and the effects of your work are
+more visible. Networking is also safer from AI (you knew I was going to bring
+this up) because it is less repeatable by LLMs and AI can't physically diagnose
+cables or design servers.
 
 > One of the challenges of completing the portfolio project is picking up a lot
 > of skills on your own. Some of these skills are, of course, software skills.
@@ -326,29 +341,40 @@ Take some time to fill them out honestly.
 > this process. Therefore, the first question is what skills did you pick up
 > through this process?
 
-<!-- TODO: discuss -->
+I improved my skills of patience and troubleshooting. Usually when code I write
+fails, I spend time trying to rewrite it from the ground up to be more simple
+rather than just working with I already have, but this project encouraged me
+to actually solve the problems more precisely.
 
 > The follow-up question is: could you rephrase these skills you picked up
 > as bullet points that you could put on a resume? Try it below.
 
-<!-- TODO: discuss -->
+- Detailed troubleshooting process
+- Determined problem solving
 
 > Next, how has working on this project affected your career trajectory?
 > In other words, do you now hate the topic you picked? Or, are you even more
 > interested in it? Both outcomes are valuable to your personal development.
 
-<!-- TODO: discuss -->
+I'm even more interested in the low-level functions of hard drives. I want to
+learn more about how their sectors store data and see how operating systems
+dynamically interact with them.
 
 > Finally, consider the skills you've picked up and your current career
 > trajectory. What are some things you could do to continue on your
 > career trajectory? Also, who are some mentors you could contact to help
 > you stay on your path?
 
-<!-- TODO: discuss -->
+My future lies within the realm of Network Engineering. Since I just changed
+my specialization to Computer Networking from Software Engineering, I will
+continue my trajectory towards that by taking networking classes in my future
+semesters, and searching for related internships. I already have the experience
+and knowledge to back up my basic skills in this field (TCP/IP, VPNs, NAS, these
+are all really interesting), and the job market for this looks a lot more
+appealing to entry-level workers than software engineering. I could meet people
+from tech companies to mentor me at job fairs, or upperclassmen with experience.
 
 ### Changelog
-
-<!-- TODO: update CHANGELOG then delete this comment -->
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
@@ -383,8 +409,6 @@ like to accomplish that, you will need to make GitHub releases after each pull
 request merge (or at least tag your commits). This is not required.
 
 ### Submission
-
-<!-- TODO: read the submission instructions then delete this comment -->
 
 Assuming that your project is in a GitHub repo somewhere and your changes are on
 a proof-of-concept branch, then what we'll want you to do is create a pull
@@ -435,7 +459,5 @@ PDF to read this rubric as a table).
 If you'd like to give feedback for this assignment (or any assignment, really),
 make use of [this survey][survey]. Your feedback helps make assignments
 better for future students.
-
-<!-- TODO: follow the link to share your feedback then delete this comment -->
 
 [survey]: https://forms.gle/dumXHo6A4Enucdkq9
