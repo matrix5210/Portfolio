@@ -76,18 +76,37 @@ a few sentences per question would be ideal.
 > complete the portfolio project, how much better (or worse) do you think you
 > understand software development and why?
 
-<!-- TODO: discuss -->
+I think I understand the key components of software development better. Because
+I picked a real world device whose functions and purpose I understand well, it
+was easy for me to map such functions into Java. This boosted my confidence in
+developing realistic software.
 
 > Also, did the portfolio project surface any gaps in your own knowledge of
 > software development. If so, what are those gaps and how did you address them?
 
-<!-- TODO: discuss -->
+I did struggle briefly with determining which class / interface to implement
+the Object methods like toString() and the secondary methods, but I reviewed
+the Software II documentation for pre-existing components like NaturalNumber and
+BinaryTree, and asked my professor for further explanation. Doing that cleared
+any doubt I had.
 
 > Finally, as a part of completing the portfolio project, to what extent has
 > your perspective of software development changed, if at all? In other words,
 > is software development something you still enjoy? If not, why not?
 
-<!-- TODO: discuss -->
+This project didn't really change my look on software development. It was just
+a reinforcement of the things I already believe about it and writing the
+hard drive component felt like a routine task without much hurdles.
+
+Unfortunately I do not enjoy traditional software development as much as I
+hoped I would or used to because the concepts are the exact same from field to
+field. High level coding just feels boring. I have also grown to despise the
+antisocial aspect of sitting down at a computer all day writing code and risking
+back pain. I find networking to be a more exciting discipline of computer
+science / IT because you're more appreciated, and the effects of your work are
+more visible. Networking is also safer from AI (you knew I was going to bring
+this up) because it is less repeatable by LLMs and AI can't physically diagnose
+cables or design servers.
 
 > One of the challenges of completing the portfolio project is picking up a lot
 > of skills on your own. Some of these skills are, of course, software skills.
@@ -95,25 +114,38 @@ a few sentences per question would be ideal.
 > this process. Therefore, the first question is what skills did you pick up
 > through this process?
 
-<!-- TODO: discuss -->
+I improved my skills of patience and troubleshooting. Usually when code I write
+fails, I spend time trying to rewrite it from the ground up to be more simple
+rather than just working with I already have, but this project encouraged me
+to actually solve the problems more precisely.
 
 > The follow-up question is: could you rephrase these skills you picked up
 > as bullet points that you could put on a resume? Try it below.
 
-<!-- TODO: discuss -->
+- Detailed troubleshooting process
+- Determined problem solving
 
 > Next, how has working on this project affected your career trajectory?
 > In other words, do you now hate the topic you picked? Or, are you even more
 > interested in it? Both outcomes are valuable to your personal development.
 
-<!-- TODO: discuss -->
+I'm even more interested in the low-level functions of hard drives. I want to
+learn more about how their sectors store data and see how operating systems
+dynamically interact with them.
 
 > Finally, consider the skills you've picked up and your current career
 > trajectory. What are some things you could do to continue on your
 > career trajectory? Also, who are some mentors you could contact to help
 > you stay on your path?
 
-<!-- TODO: discuss -->
+My future lies within the realm of Network Engineering. Since I just changed
+my specialization to Computer Networking from Software Engineering, I will
+continue my trajectory towards that by taking networking classes in my future
+semesters, and searching for related internships. I already have the experience
+and knowledge to back up my basic skills in this field (TCP/IP, VPNs, NAS, these
+are all really interesting), and the job market for this looks a lot more
+appealing to entry-level workers than software engineering. I could meet people
+from tech companies to mentor me at job fairs, or upperclassmen with experience.
 
 ## Assignment Advice
 

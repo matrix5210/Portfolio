@@ -5,13 +5,35 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Calendar Versioning](https://calver.org/) of
 the following form: YYYY.0M.0D.
+## 2026.11.13
+
+### Added
+- Designed test suite for HardDrive component (HardDrive1Test and HardDriveTest)
+- Designed two different use cases for HardDrive component (HardDriveDemo and
+MirroredDrive)
+- Added a minor test class for basic, straightforward testing (theDriver)
+
+### Updated
+- Polished all of the HardDrive classes and interfaces some more; made them
+respect design-by-contract and kernel purity rules.
+
 
 ## 2026.11.12
 
 ### Added
 
 - Designed kernel and enhanced interfaces for HardDrive component
+- Designed abstract class for HardDrive component
 
+### Updated
+- Changed HardDriveSecondary's toString() method and BYTES_PER_SECTOR to upscale
+its representation size into GB. 1 single byte is stored on each sector, but
+toString() and storageCapacity() represent it as 1 GB through conversions. This
+was done because modern hard drives do storage in TB and GB, not MB (maybe back
+in the 90s when 10 MB was a lot but not anymore in 2026)
+(1 gigabyte = 1,000,000,000 bytes). BYTES_PER_SECTOR is now 1,000,000,000
+- Polished and proofread all HardDrive classes, methods, and interfaces to
+better fit OSU's best practices and Checkstyle.
 
 ## 2026.11.11
 
@@ -19,8 +41,6 @@ the following form: YYYY.0M.0D.
 
 - Designed a proof of concept for HardDrive component
 - Added an implementation of the HardDrive component's kernel
-
-### Updated
 
 ### Removed
 
